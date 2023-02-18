@@ -6,6 +6,7 @@ export const authSlice = createSlice({
     email: "",
     isAuthorized: false,
   },
+  reducers:{
   login (state, action) {
     state.email = action.payload;
     state.isAuthorized = true
@@ -14,6 +15,8 @@ export const authSlice = createSlice({
 state.email = "";
 state.isAuthorized = false;
   }
+}
 });
 
 export const  authActions = authSlice.actions
+
